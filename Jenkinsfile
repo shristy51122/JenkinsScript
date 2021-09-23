@@ -33,6 +33,11 @@ pipeline {
                 echo "test into tomcat"
             }
         }
+        stage('accept'){
+            steps{
+                input('Do You want to proceed!!')
+            }
+        }
        stage('deploy'){
             steps{
                 echo "Deploy into tomcat"
